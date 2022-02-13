@@ -18,7 +18,13 @@ Clone this repo.
 You need **python**, I've used `python 3.9`. Then
 
 ```
-pip install -r requirements.txt
+pip install .
+```
+
+You can now call 
+
+```
+markdowntomedium --help
 ```
 
 If you want to use `--image-format carbon`, you need to install it. We use it's cli, [carbon-now-cli](https://github.com/mixn/carbon-now-cli)
@@ -30,5 +36,5 @@ npm i -g carbon-now-cli
 ## Usage
 
 ```
-python main.py --help
+markdowntomedium --help
 ```

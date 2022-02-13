@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from cmath import log
 from time import time
 from typing import List, Optional, Dict, Any, Tuple
@@ -149,8 +150,7 @@ def write_to_md(data: str, out_dir: Path, filename: str) -> Path:
         f.write(data)
     return out_path
 
-
-if __name__ == "__main__":
+def main():
     parser = ArgumentParser(
         "Convert a markdown file to an usable medium markdown. Code snippets are replace by gist or images generated using carbon"
     )
@@ -227,3 +227,8 @@ if __name__ == "__main__":
     filename: str = args.input.stem
     out_path = write_to_md(data, out_dir, filename)
     logging.info(f"Done, your new file is at {out_path}")
+
+
+if __name__ == "__main__":
+    main()
+    
