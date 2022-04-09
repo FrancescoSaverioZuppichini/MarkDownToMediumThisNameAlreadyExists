@@ -177,7 +177,7 @@ def main():
         "--image-format",
         type=str,
         default="carbon",
-        choices=["carbon, gist"],
+        choices=["carbon", "gist"],
         help="How to convert the code snippets.",
     )
     parser.add_argument(
