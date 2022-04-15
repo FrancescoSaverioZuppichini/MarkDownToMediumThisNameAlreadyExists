@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-from cmath import log
-from time import time
+import time
 from typing import List, Optional, Dict, Any, Tuple
 import requests
 import re
@@ -183,7 +182,8 @@ def main():
     parser.add_argument(
         "--link-prefix",
         type=str,
-        default="The prefix to the links used to replace your code snippets",
+        default="test",
+        help="The prefix to the links used to replace your code snippets",
     )
 
     args = parser.parse_args()
@@ -206,7 +206,7 @@ def main():
                 code,
                 name=match_num,
                 language=language,
-                prefix="test",
+                prefix=args.link_prefix,
                 token=gh_token,
             )
             to_replace: str = f"{gist_url}"
